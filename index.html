@@ -5,40 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="myStyle.css">
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
+<div class="container">
+                <div class="nav-header">
+                  <div class= header-left>
+                    <span style="font-size:15px;cursor:pointer" onclick="openNav()"> &#9776; </span>
+                    <a href="index.html" aria-current="page" class="nav-logo"><img src="images/logo.svg" loading="lazy" alt="" class="image-contain" width="90"></a>
+                    <nav id="mySidenav" class="menu-header sidenav" >
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#collection" class="nav-link"> Collection</a>
+                        <a href="#Men" class="nav-link"> Men</a>
+                        <a href="#Women" class="nav-link"> Women</a>
+                        <a href="#About" class="nav-link"> About</a>
+                      <a href="#Contact" class="nav-link"> Contact</a>
+                    </nav>
+                  </div>
+                  <div class="header-right">
+                      <a class="nav-cart"><img src="images/icon-cart.svg" loading="lazy" width="13" alt=""></a>
+                      <a class="profil-picture"><img src="images/image-avatar.png" loading= "lazy" width="13"></a>
+                  </div>
+                </div>
+            <div class="body-container">
+              <div class="gallery-photo">
+                <div class="previous-btn"><img src="images/icon-previous.svg" loading="lazy" width="13" alt=""> </div>
+                <img src="images/image-product-1.jpg" width="335" loading="lazy" alt="sneaker">
+              </div>
+               <div class="product-item-body">
+                 <h2>
+                   Sneaker company
+                 </h2>
+                 <h1> Fall Limited Edition Sneakers</h1>        
+               <p class="item-description">
+                  These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer
+                 </p>
+                 <div class="product-price">
+                   <div class="product-price-discount">
+                     <h1 > $125.00</h1>
+                     <span class="discount-percent"> 50% </span>
+                   </div>
+                   <div class="product-actual-price"> $250</div>
+                 </div>
+                 <div class="product-cart">
+                   <div class="cart-count">
+                     <button class="minus-cart"><img class="minus-image"src="images/icon-minus.svg" loading="lazy" width="13" alt="" ></button>
+                     <div id="number-of-cart">0</div>
+                     <button class="plus-cart"><img src="images/icon-plus.svg" loading="lazy" width="13" alt=""></button>
+                   </div>
+                   <button class="add-cart"><img class= "add-cart-icon"src="images/shopping-cart.jpg" width="13"> <h6>Add to cart</h6></button>
+                 </div>
+               </div>
+             
+            
+            
+            
+            
+            </div>
 
+ 
+ 
+ 
+ 
+</div>
+
+  <script>
+    function openNav(){
+      document.getElementById("mySidenav").style.width= "250px";
+      
+    }
+    function closeNav(){
+      document.getElementById("mySidenav").style.width="0";
+    }
+
+  </script>
+<!-- 
   Collections
   Men
   Women
   About
   Contact
 
-  Sneaker Company
+  Sneaker Company: This will be in orange
 
-  Fall Limited Edition Sneakers
+  Fall Limited Edition Sneakers: this is Bold 
 
   These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+  durable rubber outer sole, they’ll withstand everything the weather can offer. "This is Normal"
 
-  $125.00
-  50%
-  $250.00
+  $125.00: This is bold 400
+  50%: this is in orange
+  $250.00: faded slash
 
   0
-  Add to cart
-  
-  <div class="attribution">
+  Add to cart: in orange
+   -->
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
