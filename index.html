@@ -35,9 +35,29 @@
                 </div>
             <div class="body-container">
               <div class="gallery-photo">
-                <div class="previous-btn"><img src="images/icon-previous.svg" loading="lazy" width="13" alt=""> </div>
-                <img src="images/image-product-1.jpg" width="335" loading="lazy" alt="sneaker">
-              </div>
+                  <div class="previous-btn" onclick="plusSlides(-1)"><img src="images/icon-previous.svg" loading="lazy" width="13" alt="" z-index="1"> </div>
+                  <div class= "mySlides fade">
+                    <img class="img-product-1"src="images/image-product-1.jpg" loading="lazy" alt="sneaker">
+                  </div>
+                  <div class= "mySlides fade">
+                    <img class="img-product-2"src="images/image-product-2.jpg" loading="lazy" alt="sneaker" style="width:332px">
+                  </div>
+                  <div class= "mySlides fade">
+                    <img class="img-product-3"src="images/image-product-3.jpg" loading="lazy" alt="sneaker" style="width:332px">
+                  </div>
+                  <div class= "mySlides fade">
+                    <img class="img-product-4"src="images/image-product-4.jpg" loading="lazy" alt="sneaker" style="width:332px">
+                  </div>
+                  <div class="thumbnails">
+                    <span class="thumbnails-pic" onclick="currentSlide(1)"><img src="images/image-product-1-thumbnail.jpg" loading="lazy" alt="sneaker" width="90px"></span> 
+                    <span class="thumbnails-pic" onclick="currentSlide(2)"><img src="images/image-product-2-thumbnail.jpg" loading="lazy" alt="sneaker" width="90px"></span>
+                    <span class="thumbnails-pic" onclick="currentSlide(3)"><img src="images/image-product-3-thumbnail.jpg" loading="lazy" alt="sneaker" width="90px"></span>
+                    <span class="thumbnails-pic" onclick="currentSlide(4)"><img src="images/image-product-4-thumbnail.jpg" loading="lazy" alt="sneaker" width="90px"></span>
+                  </div>
+                 <div class="next-btn" onclick="plusSlides(1)">
+                    <img src="images/icon-next.svg" loading="lazy" width="13" alt="" z-index="1">
+                 </div> 
+            </div>
                <div class="product-item-body">
                  <h2>
                    Sneaker company
@@ -51,7 +71,7 @@
                      <h1 > $125.00</h1>
                      <span class="discount-percent"> 50% </span>
                    </div>
-                   <div class="product-actual-price"> $250</div>
+                   <div class="product-actual-price"> $250.00</div>
                  </div>
                  <div class="product-cart">
                    <div class="cart-count">
@@ -59,7 +79,9 @@
                      <div id="number-of-cart">0</div>
                      <button class="plus-cart"><img src="images/icon-plus.svg" loading="lazy" width="13" alt=""></button>
                    </div>
-                   <button class="add-cart"><img class= "add-cart-icon"src="images/shopping-cart.jpg" width="13"> <h6>Add to cart</h6></button>
+                   <button class="add-cart"><img class= "add-cart-icon"src="images/shopping-cart.jpg" width="13"> 
+                    <h6>Add to cart</h6>
+                  </button>
                  </div>
                </div>
              
@@ -84,6 +106,38 @@
       document.getElementById("mySidenav").style.width="0";
     }
 
+//Slide Gallery Next and Previous Button
+var slideIndex=1;
+showSlides(slideIndex);
+
+function plusSlides(n){
+  showSlides(slideIndex+=n);
+}
+
+function currentSlide(n){
+  showSlides(slideIndex =n);
+}
+
+function showSlides(n){
+  var slides= document.getElementsByClassName("mySlides");
+  console.log(slides);
+  var thumbnails= document.getElementsByClassName("thumbnails-pic");
+  console.log(thumbnails);
+  if(n>slides.length){
+    slideIndex=1
+  }
+  if(n<1){
+    slideIndex= slides.length
+  }
+  for(var i=0; i<slides.length;i++){
+    slides[i].style.display="none";
+  }
+  for(i=0; i<thumbnails.length;i++){
+    thumbnails[i].className= thumbnails[i].className.replace('active','');
+  }
+  slides[slideIndex-1].style.display= "block";
+  thumbnails[slideIndex-1].className+= 'active';
+}
   </script>
 <!-- 
   Collections

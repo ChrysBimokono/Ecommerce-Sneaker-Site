@@ -100,17 +100,94 @@ p{
     margin:0 10px
 }
 /* Now styling the body */
+.gallery-photo{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: inline-block;
+}
 
-.previous-btn{
-    overflow: auto;
+
+.img-product-1{
+    width: 332px;
+    vertical-align: middle;
+}
+
+.previous-btn img{
+    position: absolute;
+    margin: 130px 20px;
+    padding: 10px;
+    border: 20px;
+    background-color: white;
+    border-style: hidden;
+    border-radius: 30px;
+   
+}
+.next-btn img{
+    position: absolute;
+    top: 130px;
+    right: 5px;
+    padding: 10px;
+    border: 20px;
+    background-color: white;
+    border-style: hidden;
+    border-radius: 30px;
+}
+
+.previous-btn img:hover{
+    cursor: pointer;
+    background-color:hsl(26, 84%, 53%);
+    opacity: 1.4;
+    transition: all 0.6s ease-out;
+}
+
+.next-btn img:hover{
+    cursor: pointer;
+    background-color:hsl(26, 84%, 53%);
+    opacity: 1.4;
+    transition: all 0.6s ease-out;
+}
+
+.thumbnails {
+    cursor: pointer;
+    display: none;
+    text-align: center;
+}
+.thumbnails img{
+    border-radius: 10px;
+}
+.thumbnails img:hover{
+    opacity: 0.5;
+    transition:all 0.6s ease;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 0.7;}
+    to {opacity:1}
+}
+
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity:1} 
 }
 .product-item-body{
-    margin: 16px;
+    margin: 20px;
 }
 
 .product-item-body>h1{
      padding:5px 0; 
      font-size: 20px;
+}
+
+.item-description{
+    margin-bottom:20px ;
 }
 
 .discount-percent{
@@ -135,10 +212,14 @@ p{
 }
 
 .product-actual-price{
-    margin: 0 100px;
+    margin: 0 60px;
     color:hsl(219, 9%, 45%);
     text-decoration: line-through;
   
+}
+.product-cart{
+    width: 100%;
+    
 }
 .cart-count{
     border:20px;
@@ -155,6 +236,7 @@ p{
 }
 .plus-cart{
     justify-content: flex-end;
+    
     
     background-color:blanchedalmond;
     border: none;
@@ -186,6 +268,10 @@ p{
     cursor: pointer;
     opacity: 0.5;
     transition: all 0.3s ease-out;
+}
+
+.add-cart-icon{
+    margin:0 10px;
 }
 
 @media screen and (max-height: 375px){
