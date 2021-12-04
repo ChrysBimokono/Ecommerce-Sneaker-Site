@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="myStyle.css">
+<script src="myjavascript.js" async></script>
   <title>Frontend Mentor | E-commerce product page</title>
 
 
@@ -29,8 +30,15 @@
                     </nav>
                   </div>
                   <div class="header-right">
-                      <a class="nav-cart"><img src="images/icon-cart.svg" loading="lazy" width="13" alt=""></a>
+                      <button class="nav-cart"><img src="images/icon-cart.svg" loading="lazy" width="13" alt=""><span class="cart-count"></span></button>
                       <a class="profil-picture"><img src="images/image-avatar.png" loading= "lazy" width="13"></a>
+                      <div class="checkout-cart ">
+                        <div class="cart-title">
+                          <h3>Cart</h3>
+                          
+                        </div>
+                        <div class="empty-cart"> Your Cart is empty</div>
+                      </div>
                   </div>
                 </div>
             <div class="body-container">
@@ -62,26 +70,25 @@
                  <h2>
                    Sneaker company
                  </h2>
-                 <h1> Fall Limited Edition Sneakers</h1>        
-               <p class="item-description">
+                 <h1 class="product-title"> Fall Limited Edition Sneakers</h1>        
+                  <p class="item-description">
                   These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer
                  </p>
                  <div class="product-price">
                    <div class="product-price-discount">
-                     <h1 > $125.00</h1>
+                     <h1 class="cart-price"> $125.00</h1>
                      <span class="discount-percent"> 50% </span>
                    </div>
                    <div class="product-actual-price"> $250.00</div>
                  </div>
-                 <div class="product-cart">
-                   <div class="cart-count">
+                 <div class="product-cart">  
                      <button class="minus-cart"><img class="minus-image"src="images/icon-minus.svg" loading="lazy" width="13" alt="" ></button>
-                     <div id="number-of-cart">0</div>
-                     <button class="plus-cart"><img src="images/icon-plus.svg" loading="lazy" width="13" alt=""></button>
-                   </div>
+                     <input type="number" value="1" min="1" class="input-count">
+                     <button class="plus-cart"><img src="images/icon-plus.svg" loading="lazy" width="13" alt=""></button>        
                    <button class="add-cart"><img class= "add-cart-icon"src="images/shopping-cart.jpg" width="13"> 
-                    <h6>Add to cart</h6>
+                    Add to cart
                   </button>
+                  <button class="remove-btn delete-active"><img class= "remove-item"src="images/icon-delete.svg" width="13"> </button>
                  </div>
                </div>
              
@@ -98,46 +105,11 @@
 </div>
 
   <script>
-    function openNav(){
-      document.getElementById("mySidenav").style.width= "250px";
-      
-    }
-    function closeNav(){
-      document.getElementById("mySidenav").style.width="0";
-    }
+  
 
-//Slide Gallery Next and Previous Button
-var slideIndex=1;
-showSlides(slideIndex);
 
-function plusSlides(n){
-  showSlides(slideIndex+=n);
-}
 
-function currentSlide(n){
-  showSlides(slideIndex =n);
-}
 
-function showSlides(n){
-  var slides= document.getElementsByClassName("mySlides");
-  console.log(slides);
-  var thumbnails= document.getElementsByClassName("thumbnails-pic");
-  console.log(thumbnails);
-  if(n>slides.length){
-    slideIndex=1
-  }
-  if(n<1){
-    slideIndex= slides.length
-  }
-  for(var i=0; i<slides.length;i++){
-    slides[i].style.display="none";
-  }
-  for(i=0; i<thumbnails.length;i++){
-    thumbnails[i].className= thumbnails[i].className.replace('active','');
-  }
-  slides[slideIndex-1].style.display= "block";
-  thumbnails[slideIndex-1].className+= 'active';
-}
   </script>
 <!-- 
   Collections
