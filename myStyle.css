@@ -92,10 +92,62 @@ p{
 .nav-cart{
     margin:0 15px;
 }
+.remove-btn{
+    position: absolute;
+    justify-content: flex-end;
+    align-items: flex-end;
+    right: 30px;
+    border: none;
+}
+.remove-btn:hover{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: hsl(26, 100%, 55%);
+    opacity: 0.7;
+}
+.checkout-btn{
+    background-color:hsl(26, 100%, 55%);
+    width: 90%;
+    margin: 0 10px;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 5px;
+    border: transparent;
+}
 
-.delete-active{
+.checkout-btn:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.7s ease-out;
+}
+
+.cart-total-price{
+    position: absolute;
+    bottom: 40px;
+    left: 150px;
+}
+
+.number-selected{
+    width: 20px;
+    position: absolute;
+    bottom: 40px;
+    left: 110px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(219, 9%, 45%);;
+}
+
+.itemPrice{
+    position: absolute;
+    left:60px ;
+    bottom: 40px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(219, 9%, 45%);
+}
+
+.delete-active {
     display: none;
 }
+
 
 .menu-header{
     height: 100%;
