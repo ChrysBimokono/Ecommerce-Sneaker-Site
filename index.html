@@ -18,7 +18,7 @@
 <div class="container">
                 <div class="nav-header">
                   <div class= header-left>
-                    <span style="font-size:15px;cursor:pointer" onclick="openNav()"> &#9776; </span>
+                    <span class="hamburger"style="font-size:15px;cursor:pointer" onclick="openNav()"> &#9776; </span>
                     <a href="index.html" aria-current="page" class="nav-logo"><img src="images/logo.svg" loading="lazy" alt="" class="image-contain" width="90"></a>
                     <nav id="mySidenav" class="menu-header sidenav" >
                       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -32,20 +32,27 @@
                   <div class="header-right">
                       <button class="nav-cart"><img src="images/icon-cart.svg" loading="lazy" width="13" alt=""><span class="cart-count"></span></button>
                       <a class="profil-picture"><img src="images/image-avatar.png" loading= "lazy" width="13"></a>
-                      <div class="checkout-cart ">
-                        <div class="cart-title">
-                          <h3>Cart</h3> 
-                        </div>
-                        <div class="empty-cart"> Your Cart is empty</div>
-                        <button class="remove-btn delete-active"><img class= "remove-item"src="images/icon-delete.svg" width="13"> </button>
-                        <button class="checkout-btn delete-active">Checkout</button>
-                        <span class="itemPrice delete-active"></span>
-                        <span class="number-selected delete-active"></span>
-                        <span class="cart-total-price delete-active"></span>                      
+                        <div class="checkout-cart ">
+                          <div class="cart-title">
+                            <h3>Cart</h3> 
+                          </div>
+                          <div class="empty-cart"> Your Cart is empty</div>
+                          
+                            <button class="remove-btn delete-active"><img class= "remove-item"src="images/icon-delete.svg" width="13"> </button>
+                           <div class="cart-body delete-active">
+                            <div style="display:flex">
+                              <span class="thumbnails-pic" onclick="currentSlide(1)"><img src="images/image-product-1.jpg" loading="lazy" alt="sneaker" width="40px" style="border-radius: 10px; margin:5px 10px"></span>
+                              <div class="product-title" width="10px" style="font-size:17px; font-family: 'Kumbh Sans', sans-serif;color: hsl(219, 9%, 45%) ">Fall Limited Edition Sneakers</div> 
+                              </div>
+                            <button class="checkout-btn ">Checkout</button>
+                            <span class="itemPrice "></span>
+                            <span class="number-selected"></span>
+                            <span class="cart-total-price "></span>  
+                          </div>                    
                       </div>
                   </div>
                 </div>
-            <div class="body-container">
+           <div class="body-container">
               <div class="gallery-photo">
                   <div class="previous-btn" onclick="plusSlides(-1)"><img src="images/icon-previous.svg" loading="lazy" width="13" alt="" z-index="1"> </div>
                   <div class= "mySlides fade">
@@ -69,7 +76,7 @@
                  <div class="next-btn" onclick="plusSlides(1)">
                     <img src="images/icon-next.svg" loading="lazy" width="13" alt="" z-index="1">
                  </div> 
-            </div>
+             </div>
                <div class="product-item-body">
                  <h2>
                    Sneaker company
@@ -102,10 +109,6 @@
             
             </div>
 
- 
- 
- 
- 
 </div>
 
   <script>
