@@ -393,49 +393,81 @@ p{
     }
 
 
-    .nav-header{
-        display: flex;
-        height: 60px;
-        background-color:gray;
-        
-    } 
+    
     .hamburger{
         display: none;
     }
     
-    .menu-header{
-        
-        position: relative;
-        width: 100px;
-        display: flex;
-       height: 0;
-      
-        overflow:visible;
-        
-        transition: 0.5s;
-    
-    }
-    
-    .menu-header a {
-        
-        padding:0 5px;
-        text-decoration: none;
-        font-size: 16px;
-        color: black;
-        display: inline-block;
-        transition: 0.3s;
-    }
-    
-    .menu-header a:hover{
-        color:orange;
-    }
-    
-    .menu-header .closebtn{
-        position: relative;
+    .closebtn{
         display: none;
-      
-        
-        font-size: 3px;
+    }
+    
+
+    .nav-header{
+        display: flex;
+        height: 60px;
+        background-color: red;
+        align-items: center;
         
     }
+    .header-left{
+        padding: 5px 16px;
+        width: 70%;
+        background-color: palegoldenrod;
+    }
+    .header-right{
+        margin: 0 10px;
+        display:flex ;
+        position: relative;
+        left: 70px;
+        justify-content: space-between;
+    
+    }
+
+    
+.menu-header{
+    display: flex;
+    height: 100%;
+    position:fixed ;
+    width: 0;
+    z-index:0;
+    top:25px;
+    left: 140px;
+    background-color: #111;
+    overflow: visible;
+    padding-top: 0;
+    transition: 0.5s;
+
+}
+
+.menu-header a {
+    display: flex;
+    padding: 0px 10px ;
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+    transition: 0.3s;
+    vertical-align: sub;
+}
+
+.menu-header a:hover{
+    color:orange;
+}
+
+.menu-header .closebtn{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    margin-left: 0;
+}
+
+.nav-logo{
+    margin:0 10px
+}
+
+
+
+
 }  
