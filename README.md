@@ -125,7 +125,7 @@ However, I need to focus more on how to use clearer and better codes. I am welle
 
 ## Author
 
-- Website - [Chrys-Bim](https://www.ChrysBim.com)
+- Website - [ChrysBim](https://www.ChrysBim.com)
 - Frontend Mentor - [@ChrysBim](https://www.frontendmentor.io/profile/yourusername)
 
 ## Acknowledgments
