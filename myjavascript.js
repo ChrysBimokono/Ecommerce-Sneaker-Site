@@ -145,7 +145,9 @@ removebutton.addEventListener('click',function(event){
    var button=event.target
    var cart= document.getElementsByClassName('cart-body')[0];
    var emptyText=document.getElementsByClassName('empty-cart')[0]
+   var cartCountRemoval= document.getElementsByClassName('cart-count')[0]
    console.log(button)
+   console.log(cartCountRemoval.add('nonactive'))
    console.log(cart.classList.add('nonactive'))
    console.log(emptyText.classList.remove('nonactive'))
 })
