@@ -449,7 +449,7 @@ p{
     .menu-header a{ font-size: 18px;}
     
 }
-  @media only screen and (min-width: 700px){
+  @media only screen and (min-width: 550px){
     .container{
         max-width: 1400px;
         margin: 16px;
