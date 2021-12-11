@@ -1,6 +1,6 @@
 # Frontend Mentor - E-commerce product page solution
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).
 
 ## Table of contents
 
@@ -16,32 +16,15 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
-## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Open a lightbox gallery by clicking on the large product image
-- Switch the large product image by clicking on the small thumbnail images
-- Add items to the cart
-- View the cart and remove items from it
-
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![](images/Ecommerce-site-On-MobileDevice.jpeg)
+![](images/Ecommerce-On-Pc.jpeg)
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
 Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
 Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -57,59 +40,95 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- DOM JS 
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
+I have Learned so much doing this project. Among them are:
+*Designing a better responsive website using JavaScript combined with HTML plus CSS
+*The User will be able to view the optimal layout for the site depending on their device's screen
+* I learned to design a lightbox gallery Using DOM property of JavaScript.
+* The user can then switch the large product image by clicking on the small thumbnail images
+* I Learned how to create a shopping cart Using pure JavaScript by traversing the DOM.
+* I learned how to add items into the Cart and removing it.
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<h1>Some HTML code I'm proud of
+   <nav id="mySidenav" class="menu-header sidenav" >
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#collection" class="nav-link"> Collection</a>
+                        <a href="#Men" class="nav-link"> Men</a>
+                        <a href="#Women" class="nav-link"> Women</a>
+                        <a href="#About" class="nav-link"> About</a>
+                      <a href="#Contact" class="nav-link"> Contact</a>
+                    </nav>
+</h1>
 ```
 ```css
 .proud-of-this-css {
-  color: papayawhip;
+ .checkout-cart{
+  background-color:white;
+  display: none;
+  position: absolute;
+  top: 4.5rem;
+  left: 33%;
+  max-width: 17rem;
+  width: 100%;
+  height: 140px;
+  border-radius: 5px;
+  aspect-ratio: 2/1;
+  box-shadow: 0 10px 32px 2px rgb(0 0 0 / 16%);
+  z-index: 1;
+  transition: all 0.8s ease-out
+}
 }
 ```
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉')
+  function buttonPlusadd(){
+    buttonPlus.previousElementSibling.value++;
+    numberOfitem=buttonPlus.previousElementSibling.value
+    console.log(numberOfitem)
+    var gettingPrice=buttonPlus.parentElement.parentElement
+    console.log(gettingPrice)
+    var wegotthePrice= gettingPrice.childNodes[1].childNodes[1].childNodes[1].innerText
+    console.log(wegotthePrice)
+    var priceOfitem=parseFloat(wegotthePrice.replace('$',''))
+    console.log(priceOfitem)
+    var total= numberOfitem*priceOfitem
+    var numberItemSelected= document.getElementsByClassName('number-selected ')[0].innerText= numberOfitem
+    var itemPrices= document.getElementsByClassName('itemPrice')[0].innerText= '$'+priceOfitem+'x'
+    var cartTotalPrice= document.getElementsByClassName('cart-total-price')[0].innerText= '$'+total
+    var cartCount= document.getElementsByClassName('cart-count')[0].innerText= numberOfitem
+    console.log(itemPrices)
+    console.log(numberItemSelected)
+    console.log(cartTotalPrice)
+    console.log(cartCount)
+    
+}
 }
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+However, I need to focus more on how to use clearer and better codes. I am welle aware that this can be achieved using easier and better code Such as Jquery Library or React.js. Therefore, i hope to build this store using libraries next time.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- https://www.w3schools.com/jsref/default.asp - This helped me become better at using and manipulating the DOM element. I really liked this pattern and will use it going forward.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Chrys-Bim](https://www.ChrysBim.com)
+- Frontend Mentor - [@ChrysBim](https://www.frontendmentor.io/profile/yourusername)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I really enjoyed this project and i thanks all mentor in frontendMentor slack community.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

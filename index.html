@@ -30,54 +30,51 @@
                     </nav>
                   </div>
                   <div class="header-right">
-                      <button class="nav-cart"><img src="images/icon-cart.svg" loading="lazy" width="13" alt=""><span class="cart-count"></span></button>
+                      <button class="nav-cart"><img src="images/icon-cart.svg" loading="lazy" width="13" alt=""><span class="cart-count delete-active">2</span></button>
                       <a class="profil-picture"><img src="images/image-avatar.png" loading= "lazy" width="13"></a>
                         <div class="checkout-cart ">
                           <div class="cart-title">
                             <h3>Cart</h3> 
                           </div>
-                          <div class="empty-cart"> Your Cart is empty</div>
-                          
+                          <div class="empty-cart"> Your Cart is empty</div>    
                             <button class="remove-btn delete-active"><img class= "remove-item"src="images/icon-delete.svg" width="13"> </button>
                            <div class="cart-body delete-active">
                             <div style="display:flex">
-                              <span class="thumbnails-pic" onclick="currentSlide(1)"><img src="images/image-product-1.jpg" loading="lazy" alt="sneaker" width="40px" style="border-radius: 10px; margin:5px 10px"></span>
-                              <div class="product-title" width="10px" style="font-size:17px; font-family: 'Kumbh Sans', sans-serif;color: hsl(219, 9%, 45%) ">Fall Limited Edition Sneakers</div> 
+                              <span class="cart-image" onclick="currentSlide(1)"><img src="images/image-product-1.jpg" loading="lazy" alt="sneaker"></span>
+                              <div class="title" >Fall Limited Edition Sneakers</div> 
                               </div>
                             <button class="checkout-btn ">Checkout</button>
                             <span class="itemPrice "></span>
                             <span class="number-selected"></span>
-                            <span class="cart-total-price "></span>  
-                          </div>                    
+                            <span class="cart-total-price "></span>
+                          </div>                      
                       </div>
                   </div>
                 </div>
            <div class="body-container">
-              <div class="gallery-photo">
-                <div class="gallery-1">
+              <div class="gallery-photo"> 
                   <div class="previous-btn" onclick="plusSlides(-1)"><img src="images/icon-previous.svg" loading="lazy" width="13" alt="" z-index="1"> </div>
                   <div class= "mySlides fade">
-                    <img class="img-product-1"src="images/image-product-1.jpg" loading="lazy" alt="sneaker">
+                    <img class="img-product-1"src="images/image-product-1.jpg"  loading="lazy" alt="sneaker">
                   </div>
                   <div class= "mySlides fade">
-                    <img class="img-product-2"src="images/image-product-2.jpg" loading="lazy" alt="sneaker" style="width:100%">
+                    <img class="img-product-2"src="images/image-product-2.jpg" loading="lazy" alt="sneaker" >
                   </div>
                   <div class= "mySlides fade">
-                    <img class="img-product-3"src="images/image-product-3.jpg" loading="lazy" alt="sneaker" style="width:100%">
+                    <img class="img-product-3"src="images/image-product-3.jpg" loading="lazy" alt="sneaker" >
                   </div>
                   <div class= "mySlides fade">
-                    <img class="img-product-4"src="images/image-product-4.jpg" loading="lazy" alt="sneaker" style="width:100%">
+                    <img class="img-product-4"src="images/image-product-4.jpg" loading="lazy" alt="sneaker" >
                   </div>
-                </div>
                   <div class="thumbnails">
-                    <span class="thumbnails-pic" onclick="currentSlide(1)"><img src="images/image-product-1-thumbnail.jpg" loading="lazy" alt="sneaker" ></span> 
-                    <span class="thumbnails-pic" onclick="currentSlide(2)"><img src="images/image-product-2-thumbnail.jpg" loading="lazy" alt="sneaker" ></span>
-                    <span class="thumbnails-pic" onclick="currentSlide(3)"><img src="images/image-product-3-thumbnail.jpg" loading="lazy" alt="sneaker" ></span>
-                    <span class="thumbnails-pic" onclick="currentSlide(4)"><img src="images/image-product-4-thumbnail.jpg" loading="lazy" alt="sneaker" ></span>
+                    <div class="thumbnails-pic" onclick="currentSlide(1)"><img class="demo cursor" src="images/image-product-1-thumbnail.jpg" loading="lazy" alt="sneaker" ></div> 
+                    <div class="thumbnails-pic" onclick="currentSlide(2)"><img class="demo cursor"src="images/image-product-2-thumbnail.jpg" loading="lazy" alt="sneaker" ></div>
+                    <div class="thumbnails-pic" onclick="currentSlide(3)"><img class="demo cursor"src="images/image-product-3-thumbnail.jpg" loading="lazy" alt="sneaker" ></div>
+                    <div class="thumbnails-pic" onclick="currentSlide(4)"><img class="demo cursor"src="images/image-product-4-thumbnail.jpg" loading="lazy" alt="sneaker" ></div>
                   </div>
                  <div class="next-btn" onclick="plusSlides(1)">
                     <img src="images/icon-next.svg" loading="lazy" width="13" alt="" z-index="1">
-                 </div> 
+                 </div>
              </div>
                <div class="product-item-body">
                  <h2>
@@ -87,6 +84,7 @@
                   <p class="item-description">
                   These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer
                  </p>
+                 <div class="price-container">
                  <div class="product-price">
                    <div class="product-price-discount">
                      <h1 class="cart-price"> $125.00</h1>
@@ -96,19 +94,12 @@
                  </div>
                  <div class="product-cart">  
                      <button class="minus-cart"><img class="minus-image"src="images/icon-minus.svg" loading="lazy" width="13" alt="" ></button>
-                     <input type="number" value="1" min="0" class="input-count">
-                     <button class="plus-cart"><img src="images/icon-plus.svg" loading="lazy" width="13" alt=""></button>        
-                   <button class="add-cart"><img class= "add-cart-icon"src="images/shopping-cart.jpg" width="13"> 
-                    Add to cart
-                  </button>
-                  
-                 </div>
-               </div>
-             
-            
-            
-            
-            
+                     <input type="number" value="0" min="0" class="input-count">
+                     <button class="plus-cart"><img src="images/icon-plus.svg" loading="lazy" width="13" alt=""></button>   
+                   <button class="add-cart"><img class= "add-cart-icon"src="images/shopping-cart.jpg" width="13">Add to cart</button>
+                </div>
+              </div>  
+               </div>  
             </div>
 
 </div>
