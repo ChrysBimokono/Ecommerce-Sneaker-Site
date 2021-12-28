@@ -73,10 +73,11 @@ function buttonMinusadd(){
     var numberItemSelected= document.getElementsByClassName('number-selected ')[0].innerText= numberOfitem
     var itemPrices= document.getElementsByClassName('itemPrice')[0].innerText= '$'+priceOfitem+'x'
     var cartTotalPrice= document.getElementsByClassName('cart-total-price')[0].innerText= '$'+total
+    var cartCount= document.getElementsByClassName('cart-count')[0].innerText= numberOfitem
     console.log(itemPrices)
     console.log(numberItemSelected)
     console.log(cartTotalPrice)
-    console.log(total)
+    console.log(cartCount)
   
 }
 //Function to increase the number of itmes and updating the total amount
@@ -151,5 +152,9 @@ removebutton.addEventListener('click',function(event){
    console.log(cart.classList.add('nonactive'))
    console.log(emptyText.classList.remove('nonactive'))
 })
+
+
+
+
 
 
